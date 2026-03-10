@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Day Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🤖 AI Super Day Calculator</h1>
+            <p>Enter a day of the week and discover what comes next!</p>
+            <form method="POST" class="form">
+                <div class="input-group">
+                    <input type="text" name="day" placeholder="e.g., Monday" required>
+                    <button type="submit" class="btn">Calculate Next Day</button>
+                </div>
+            </form>
+            {% if result %}
+            <div class="result">
+                <h2>{{ result }}</h2>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
